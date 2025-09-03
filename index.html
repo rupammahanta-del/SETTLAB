@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETTLAB — Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img id="logo-img" src="logos/logo-dark.png" alt="SETT Lab Logo">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="people.html">People</a>
+        </nav>
+        <button id="theme-toggle">🌙</button>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <header class="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/vid2.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Animated SVG Text -->
+        <svg viewBox="0 0 1600 200" class="animated-text">
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
+                Smart Energy & Thermal Transport Lab (SETTLAB)
+            </text>
+        </svg>
+
+        <p>Innovating at the intersection of energy and thermal sciences</p>
+        <a href="research.html" class="btn">Explore Research</a>
+    </header>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <h2>What We Do</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Research</h3>
+                <p>Innovative studies in heat transfer, condensation, frosting, and advanced cooling technologies.</p>
+                <a href="research.html">Explore</a>
+            </div>
+            <div class="card">
+                <h3>People</h3>
+                <p>Meet our passionate researchers and PhD scholars driving impactful discoveries.</p>
+                <a href="people.html">Meet the Team</a>
+            </div>
+            <div class="card">
+                <h3>Publications</h3>
+                <p>Discover our contributions to high-impact journals and international conferences.</p>
+                <a href="publications.html">View Publications</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d561.045668829546!2d72.68459119241463!3d23.21378689638251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2b1fdc05e851%3A0xf31b83be6c9014f8!2sAcademic%20Block-4%2C%20IIT%20Gandhinagar!5e0!3m2!1sen!2sin!4v1756633701922!5m2!1sen!2sin"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Smart Energy & Thermal Transport Lab | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
+
+
