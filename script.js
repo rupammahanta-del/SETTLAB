@@ -36,11 +36,11 @@ if (logoImg) {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
     body.classList.add("light");
-    logoImg.src = "photos/LOGO7.png"; // logo for light theme
+    logoImg.src = "photos/LOGO7.png"; // light logo
     themeToggle.textContent = "🌞";
   } else {
     body.classList.remove("light"); // dark is default
-    logoImg.src = "photos/LOGO6.png"; // logo for dark theme
+    logoImg.src = "photos/LOGO6.png"; // dark logo
     themeToggle.textContent = "🌙";
   }
 
@@ -49,11 +49,11 @@ if (logoImg) {
     body.classList.toggle("light");
 
     if (body.classList.contains("light")) {
-      logoImg.src = "photos/LOGO7.png";
+      logoImg.src = "photos/LOGO7.png"; // light logo
       themeToggle.textContent = "🌞"; 
       localStorage.setItem("theme", "light");
     } else {
-      logoImg.src = "photos/LOGO7.png";
+      logoImg.src = "photos/LOGO6.png"; // dark logo
       themeToggle.textContent = "🌙"; 
       localStorage.setItem("theme", "dark");
     }
