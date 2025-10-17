@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - SETT Lab</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications - SETT Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="logo">
-            <a href="index.html">
-                <img id="logo-img" src="logos/logo-dark.png" alt="SETT Lab Logo">
-            </a>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html" class="active">Publications</a>
-            <a href="people.html">People</a>
-        </nav>
-        <button id="theme-toggle">🌙</button>
-    </header>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img id="logo-img" src="logos/logo-dark.png" alt="SETT Lab Logo"></a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="people.html">People</a>
+    </nav>
+    <button id="theme-toggle">🌙</button>
+  </header>
 
-    <!-- Publications Section -->
-    <main class="content" style="padding:4rem 8%; text-align:center;">
-        <h1>Our Publications</h1>
-        <section class="publications-list">
-            <ul>
-                <li>
-                    <strong>Characterizing condensation from humid air on wettability-engineered inclined surfaces through non-intrusive mapping of boundary layer</strong>
-                    <br>Authors:S Halder, C Das, I Roy, S Sett, A Datta, R Ganguly<br>
-                    <em>International Journal of Heat and Mass Transfer 255, 127708</em><br>
-                    <a href="#">https://doi.org/10.1016/j.ijheatmasstransfer.2025.127708</a>
-                </li>
-                <li>
-                    <strong>Transitioning Surface Wettability of Ti6Al4V via Laser Ablation and Post-processing Methods</strong>
-                    <br>RS Devra, R Gupta, N Rahul, S Sett, M Vadali<br>
-                    <em>Journal of Bio-and Tribo-Corrosion 11 (2), 39</em><br>
-                    <a href="#">DOI/Link</a>
-                </li>
-                <li>
-                    <strong>Paper Title 3</strong><br>
-                    Authors: A, B, C<br>
-                    <em>Journal/Conference, Year</em><br>
-                    <a href="#">DOI/Link</a>
-                </li>
-                <!-- Add more papers here -->
-            </ul>
-        </section>
-    </main>
+  <!-- Year Filter -->
+  <div class="pub-year-filter">
+    <div class="year-links">
+      <a href="#2025">2025</a>
+      <a href="#2024">2024</a>
+      <a href="#2023">2023</a>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Smart Energy & Thermal Transport Lab | All Rights Reserved</p>
-    </footer>
+  <!-- Publications List -->
+  <main class="content" style="padding:4rem 8%; text-align:center;">
+    <h1>Our Publications</h1>
+
+    <!-- 2025 -->
+    <section class="publications-list" id="2025">
+      <h2>2025</h2>
+      <ul>
+        <li>
+          <strong>Characterizing condensation from humid air on wettability-engineered inclined surfaces</strong><br>
+          Authors: S Halder, C Das, I Roy, S Sett, A Datta, R Ganguly<br>
+          <em>International Journal of Heat and Mass Transfer 255, 127708</em><br>
+          <a href="#">https://doi.org/10.1016/j.ijheatmasstransfer.2025.127708</a>
+        </li>
+        <li>
+          <strong>Transitioning Surface Wettability of Ti6Al4V via Laser Ablation and Post-processing Methods</strong><br>
+          Authors: RS Devra, R Gupta, N Rahul, S Sett, M Vadali<br>
+          <em>Journal of Bio-and Tribo-Corrosion 11 (2), 39</em><br>
+          <a href="#">DOI/Link</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2024 -->
+    <section class="publications-list" id="2024">
+      <h2>2024</h2>
+      <ul>
+        <li>
+          <strong>Sample Paper 2024</strong><br>
+          Authors: A, B, C<br>
+          <em>Journal/Conference, 2024</em><br>
+          <a href="#">DOI/Link</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2023 -->
+    <section class="publications-list" id="2023">
+      <h2>2023</h2>
+      <ul>
+        <li>
+          <strong>Sample Paper 2023</strong><br>
+          Authors: X, Y, Z<br>
+          <em>Journal/Conference, 2023</em><br>
+          <a href="#">DOI/Link</a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Smart Energy & Thermal Transport Lab | All Rights Reserved</p>
+  </footer>
 
 </body>
-
 </html>
-
-
