@@ -13,38 +13,49 @@
 
     <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">
+        <div class="nav-logo">
             <a href="index.html">
-                <img id="logo-img" src="logos/logo-dark.png" alt="SETT Lab Logo">
+                <img id="logo-img" src="photos/LOGO7.png" alt="SETT Lab Logo">
             </a>
         </div>
+
         <nav class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="research.html">Research</a>
             <a href="publications.html">Publications</a>
             <a href="people.html">People</a>
         </nav>
-        <button id="theme-toggle">🌙</button>
+
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </header>
 
-    <!-- Hero Section with Video Background -->
+
+    <!-- Hero Section with Blurred Left Overlay -->
     <header class="hero">
         <video autoplay muted loop id="bg-video">
-            <source src="videos/vid2.mp4" type="video/mp4">
+            <source src="videos/melting.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <div class="overlay"></div>
 
-        <!-- Animated SVG Text -->
-        <svg viewBox="0 0 1600 200" class="animated-text">
-            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
-                Smart Energy & Thermal Transport Lab (SETTLAB)
-            </text>
+        <!-- Blurred Left Half -->
+        <div class="blur-left"></div>
+
+        <!-- Text Content -->
+        <div class="hero-content">
+            <svg viewBox="0 0 2000 1200" class="animated-text" preserveAspectRatio="xMidYMid meet">
+                <text x="50%" y="30%" text-anchor="start" dominant-baseline="middle">
+                    <tspan x="-15%" dy="0">Smart Energy &</tspan>
+                    <tspan x="-15%" dy="1.2em">Thermal Transport</tspan>
+                    <tspan x="-15%" dy="1.2em">Research Lab</tspan>
+                </text>
+            </svg>
+        </div>
+
+
         </svg>
-
-        <p>Innovating at the intersection of energy and thermal sciences</p>
-        <a href="research.html" class="btn">Explore Research</a>
+        </div>
     </header>
+
 
     <!-- Highlights Section -->
     <section class="highlights">
@@ -80,6 +91,8 @@
             </iframe>
         </div>
     </section>
+
+
     <!-- Footer -->
     <footer>
         <p>© 2025 Smart Energy & Thermal Transport Lab | All Rights Reserved</p>
@@ -88,5 +101,3 @@
 </body>
 
 </html>
-
-
