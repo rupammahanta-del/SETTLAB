@@ -26,36 +26,14 @@ navLinks.forEach(link => {
   }
 });
 
-// ----------------- Theme Toggle (with Logo Switch) -----------------
-const themeToggle = document.getElementById("theme-toggle");
+// ----------------- Always Dark Mode -----------------
 const logoImg = document.getElementById("logo-img");
-const body = document.body;
-
 if (logoImg) {
-  // Load saved theme from localStorage
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    body.classList.add("light");
-    logoImg.src = "photos/LOGO6.png"; // logo for light theme
-    themeToggle.textContent = "🌞";
-  } else {
-    body.classList.remove("light"); // dark is default
-    logoImg.src = "photos/LOGO7.png"; // logo for dark theme
-    themeToggle.textContent = "🌙";
-  }
+  logoImg.src = "photos/LOGO7.png"; // always use dark-theme logo
+}
 
-  // Toggle theme on button click
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light");
-
-    if (body.classList.contains("light")) {
-      logoImg.src = "photos/LOGO6.png";
-      themeToggle.textContent = "🌞"; 
-      localStorage.setItem("theme", "light");
-    } else {
-      logoImg.src = "photos/LOGO7.png";
-      themeToggle.textContent = "🌙"; 
-      localStorage.setItem("theme", "dark");
-    }
-  });
+// Remove theme toggle button if exists
+const themeToggle = document.getElementById("theme-toggle");
+if (themeToggle) {
+  themeToggle.remove();
 }
