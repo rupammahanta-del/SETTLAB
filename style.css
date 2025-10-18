@@ -742,3 +742,40 @@ footer {
 body.light .map-section h2 {
   color: #ff6600;
 }
+
+
+/* CSS for all topic pages */
+.topic {
+  padding: 2rem 8%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.topic h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00e0ff;
+  text-align: center;
+}
+
+.topic p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .topic {
+    padding: 1.5rem 4%;
+  }
+
+  .topic h1 {
+    font-size: 2rem;
+  }
+
+  .topic p {
+    font-size: 1rem;
+  }
+}

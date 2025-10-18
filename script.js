@@ -1,14 +1,14 @@
 // ----------------- Homepage Animated Text -----------------
-const text = document.querySelector(".animated-text text");
-if (text) {
-  const strokeDuration = 30; // seconds for stroke animation
-  const fillDuration = 1;    // seconds for fill animation
-  const length = 2200; // adjust based on text length
+const animatedText = document.querySelector(".animated-text text");
+if (animatedText) {
+  const strokeDuration = 10; // reduced to make drawing faster
+  const fillDuration = 0.5;  // faster fill
+  const length = 2200;        // adjust based on text length
 
-  text.style.strokeDasharray = length;
-  text.style.strokeDashoffset = length;
+  animatedText.style.strokeDasharray = length;
+  animatedText.style.strokeDashoffset = length;
 
-  text.style.animation = `draw ${strokeDuration}s linear forwards, fillText ${fillDuration}s ease forwards ${strokeDuration}s`;
+  animatedText.style.animation = `draw ${strokeDuration}s linear forwards, fillText ${fillDuration}s ease forwards ${strokeDuration}s`;
 
   const styleSheet = document.createElement("style");
   styleSheet.innerHTML = `
@@ -19,8 +19,7 @@ if (text) {
 }
 
 // ----------------- Navbar Active Link -----------------
-const navLinks = document.querySelectorAll(".nav-links a");
-navLinks.forEach(link => {
+document.querySelectorAll(".nav-links a").forEach(link => {
   if (link.href === window.location.href) {
     link.classList.add("active");
   }
@@ -29,11 +28,9 @@ navLinks.forEach(link => {
 // ----------------- Always Dark Mode -----------------
 const logoImg = document.getElementById("logo-img");
 if (logoImg) {
-  logoImg.src = "photos/LOGO7.png"; // always use dark-theme logo
+  logoImg.src = "photos/LOGO7.png"; // dark logo
 }
 
-// Remove theme toggle button if exists
+// Remove theme toggle if exists
 const themeToggle = document.getElementById("theme-toggle");
-if (themeToggle) {
-  themeToggle.remove();
-}
+if (themeToggle) themeToggle.remove();
