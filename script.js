@@ -1,8 +1,8 @@
 // ----------------- Homepage Animated Text -----------------
 const animatedText = document.querySelector(".animated-text text");
 if (animatedText) {
-  const strokeDuration = 10; // reduced to make drawing faster
-  const fillDuration = 0.5;  // faster fill
+  const strokeDuration = 6; // reduced to make drawing faster
+  const fillDuration = 1;  // faster fill
   const length = 2200;        // adjust based on text length
 
   animatedText.style.strokeDasharray = length;

@@ -2,11 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SETTLAB — Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script defer>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarClose = document.getElementById('sidebar-close');
+
+        if (menuToggle && sidebar) {
+          menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-open');
+          });
+          sidebar.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A' || e.target === sidebarClose) {
+              sidebar.classList.remove('sidebar-open');
+            }
+          });
+        }
+      });
+    </script>
 </head>
 
 <body>
@@ -19,6 +39,8 @@
             </a>
         </div>
 
+        <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
+
         <nav class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="research.html">Research</a>
@@ -28,10 +50,22 @@
         </nav>
     </header>
 
+    <!-- Sidebar for small screens -->
+    <aside id="sidebar" aria-label="Sidebar navigation">
+        <button id="sidebar-close" aria-label="Close Menu">&times;</button>
+        <nav class="sidebar-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="people.html">People</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </aside>
+
     <!-- Hero Section with Blurred Left Overlay -->
     <header class="hero">
         <video autoplay muted loop id="bg-video">
-            <source src="videos/melting.mp4" type="video/mp4">
+            <source src="videos/melting.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
 
@@ -52,12 +86,12 @@
     <section class="about">
         <h2>About SETT Lab</h2>
         <p>
-           Our group's research interests intersect the multidisciplinary fields of thermo-fluid sciences, surface engineering, and renewable energy. 
-           We investigate how micro/nano-scale surface structures and interfacial properties can be engineered to bring about transformational 
-           efficiency enhancements in thermal and fluid transport. With the insights gained from fundamental studies, we develop novel systems
-            and devices for applications at the water-energy nexus. To achieve these goals, we employ state-of-the-art micro/nanofabrication 
+            Our group's research interests intersect the multidisciplinary fields of thermo-fluid sciences, surface engineering, and renewable energy.
+            We investigate how micro/nano-scale surface structures and interfacial properties can be engineered to bring about transformational
+            efficiency enhancements in thermal and fluid transport. With the insights gained from fundamental studies, we develop novel systems
+            and devices for applications at the water-energy nexus. To achieve these goals, we employ state-of-the-art micro/nanofabrication
             techniques, visualization techniques, advanced heat transfer experimentation and numerical modeling for effective thermal transport,
-             thermal energy conversion, atmospheric water harvesting, desalination, and thermal management of devices.
+            thermal energy conversion, atmospheric water harvesting, desalination, and thermal management of devices.
         </p>
     </section>
 
@@ -66,18 +100,17 @@
         <h2>Our Collaborators</h2>
         <div class="collab-logos">
             <a href="https://www.company1.com" target="_blank" class="collab-card">
-                <img src="photos/collab1.png" alt="Company 1 Logo">
+                <img src="photos/collab1.png" alt="Company 1 Logo" />
             </a>
             <a href="https://www.company2.com" target="_blank" class="collab-card">
-                <img src="photos/collab2.png" alt="Company 2 Logo">
+                <img src="photos/collab2.png" alt="Company 2 Logo" />
             </a>
             <a href="https://www.company3.com" target="_blank" class="collab-card">
-                <img src="photos/collab3.png" alt="Company 3 Logo">
+                <img src="photos/collab3.png" alt="Company 3 Logo" />
             </a>
             <a href="https://www.company4.com" target="_blank" class="collab-card">
-                <img src="photos/collab4.png" alt="Company 4 Logo">
+                <img src="photos/collab4.png" alt="Company 4 Logo" />
             </a>
-            <!-- Add more collaborator logos with links -->
         </div>
     </section>
 
@@ -87,16 +120,56 @@
         <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d561.045668829546!2d72.68459119241463!3d23.21378689638251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2b1fdc05e851%3A0xf31b83be6c9014f8!2sAcademic%20Block-4%2C%20IIT%20Gandhinagar!5e0!3m2!1sen!2sin!4v1756633701922!5m2!1sen!2sin"
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Smart Energy & Thermal Transport Lab | All Rights Reserved</p>
-    </footer>
+    <!-- Custom Footer Section (replace old footer) -->
+    <section class="foot">
+      <div class="main-content">
+        <div class="left box">
+          <h2>Address</h2>
+          <div class="ftcontent">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">AB 6/359, IIT Gandhinagar,<br> Gujarat-382355<br> India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <div class="ftcontent">
+            <img src="photos/logo5.png" alt="iitgn" class="footer-logo"> 
+          </div>
+        </div>
+
+        <div class="right box">
+          <h2>Contact Us</h2>
+          <div class="ftcontent">
+            <div class="phone">
+              <a href="tel:+91-79-2395-2578"><span class="fas fa-phone-alt"></span></a>
+              <span class="text">+91-79-2395-2578</span>
+            </div>
+            <div class="email">
+              <a href="mailto:soumyadipsett@iitgn.ac.in"><span class="fas fa-envelope"></span></a>
+              <span class="text">soumyadipsett@iitgn.ac.in</span>
+            </div>
+            <div class="social">
+              <a href="https://scholar.google.com/citations?user=b-KWptQAAAAJ&hl=en&oi=ao"><span class="fas fa-graduation-cap"></span></a>
+              <!--<a href="https://twitter.com/sett_soumyadip"><span class="fab fa-twitter"></span></a>-->
+              <a href="https://www.linkedin.com/in/soumyadip-sett-b267b347/"><span class="fab fa-linkedin"></span></a>
+              <!--<a href="https://www.youtube.com/channel/UCTtkqezcAs2k_xDkAztm_KQ"><span class="fab fa-youtube"></span></a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="#">SETT Research Lab</a> | </span>
+          <span class="far fa-copyright"></span><span> 2025 All rights reserved.</span>
+        </center>
+      </div>
+    </section>
 
 </body>
 
