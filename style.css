@@ -190,21 +190,27 @@ body {
 
 /* About Section */
 .about {
-    padding: 4rem 8%;
+    width: 100%;
+    padding: 4rem 0; /* vertical padding only */
     text-align: center;
 }
+
 .about h2 {
     font-size: 2rem;
     color: #00e0ff;
     margin-bottom: 1.5rem;
 }
+
 .about p {
-    max-width: 800px;
+    width: 90%;
+    max-width: clamp(800px, 80vw, 1500px);
     margin: 0 auto;
     line-height: 1.6;
     color: #f1f1f1;
     text-align: justify;
 }
+
+
 
 /* Collaborators Section */
 .collaborators {
@@ -218,31 +224,38 @@ body {
 }
 .collab-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 180px; /* Ensures equal height for all cards */
     gap: 2rem;
     justify-items: center;
     align-items: center;
 }
+
 .collab-card {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #1e1e1e;
-    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    transition: transform 0.3s, background 0.3s;
     text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    width: 100%;
+    height: 100%;
 }
+
 .collab-card:hover {
     transform: translateY(-5px);
     background: #2a2a2a;
 }
+
 .collab-card img {
-    max-width: 120px;
-    height: auto;
-    object-fit: contain;
+    width: 80%;        /* Adjust size to fill most of the card */
+    height: 80%;       /* Limits height to keep padding around the image */
+    object-fit: contain; /* Keeps aspect ratio, fits inside container */
+    display: block;    /* Removes inline spacing */
 }
+
 
 
 /* ----------------- Footer ----------------- */
@@ -947,23 +960,27 @@ body.light .map-section h2 {
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   padding-top: 30px;
-  text-align: center; /* Center all text */
+  text-align: center;
 }
 .foot .main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the boxes horizontally */
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
+  gap: 40px;
   padding: 0 30px;
-  gap: 40px; /* Add spacing between boxes */
+  overflow-x: auto;   /* Enable horizontal scroll on small screens */
+  align-items: stretch;
 }
 .foot .box {
-  flex: 1 1 300px;
-  margin: 15px;
+  min-width: 260px;   /* Minimum box width for scaling */
+  max-width: 350px;   /* Maximum width ensures boxes nest visually */
+  margin: 15px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  flex: 1;
 }
 .foot .box h2 {
   font-size: 1.3em;
@@ -977,7 +994,7 @@ body.light .map-section h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center ftcontent */
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -999,7 +1016,7 @@ body.light .map-section h2 {
 .foot .social {
   margin-top: 10px;
   display: flex;
-  justify-content: center; /* Center social icons */
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -1014,9 +1031,8 @@ body.light .map-section h2 {
 .foot .social a:hover {
   color: #00e0ff;
 }
-/* Replace the following block: .foot .center img */
 .footer-logo {
-  width: 200px;      /* Change this value for logo size */
+  width: 200px;
   max-width: 100%;
   height: auto;
   margin-top: 8px;
@@ -1042,21 +1058,32 @@ body.light .map-section h2 {
   font-weight: bold;
   text-align: center;
 }
-@media (max-width: 768px) {
+/* Responsive styles: All boxes stay in one row, scroll left/right on mobile */
+@media (max-width: 1280px) {
   .foot .main-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+    grid-auto-flow: column;
+    overflow-x: auto;
   }
   .foot .box {
-    margin: 12px 0;
-    width: 100%;
-    align-items: center;
+    min-width: 220px;
+    max-width: 90vw;
   }
-  /* Responsive logo size */
   .footer-logo {
-    margin: 12px auto;
-    display: block;
-    width: 100px;    /* Optional: set smaller on mobile */
+    width: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .foot .main-content {
+    grid-auto-flow: column;
+    overflow-x: auto;
+    padding: 0 10px;
+    gap: 20px;
+  }
+  .foot .box {
+    min-width: 190px;
+    font-size: 0.93em;
+  }
+  .footer-logo {
+    width: 80px;
   }
 }
